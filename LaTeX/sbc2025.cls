@@ -14,7 +14,8 @@
 \RequirePackage{enumitem}
 \RequirePackage[explicit]{titlesec}
 \RequirePackage[T1]{fontenc}
-\RequirePackage[tracking=smallcaps]{microtype}
+% turning off for XeLatex; only works with pdfLatex
+%\RequirePackage[tracking=smallcaps]{microtype}
 \RequirePackage{lmodern}
 \RequirePackage[book]{FiraSans}
 \RequirePackage{caption}
@@ -22,7 +23,7 @@
 
 \RequirePackage{fontspec}
 
-
+% replaced A4 for a4paper 
 \RequirePackage[a4paper,top=.4in,includehead,headsep=20pt,headheight=28pt,left=.70in,textwidth=41.5pc,textheight=60pc,columnsep=18pt,footskip=18pt]{geometry}
 
 %\renewcommand*\ttdefault{cmvtt}
