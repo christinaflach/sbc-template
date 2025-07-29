@@ -1,7 +1,15 @@
+%%
+%% sbc2025.cls
+%% Version 2
+%% Author: Sociedade Brasileira de Computação (SBC), Brasil
+%% Date: [2025/07/29]
+%% Description: Template for SBC journal papers.
+%%
+
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{sbc2025}[2025/07/29, v2.0]
 
-% Run with XeLatex
+%% Run with XeLatex or LuaLatex
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
@@ -12,23 +20,26 @@
 \RequirePackage{etoolbox}
 \RequirePackage[style]{abstract}
 \RequirePackage{enumitem}
-\RequirePackage[explicit]{titlesec}
 \RequirePackage[T1]{fontenc}
-% turning off for XeLatex; only works with pdfLatex
+
+%% Turning off for XeLatex and LuaLatex (2025)
 %\RequirePackage[tracking=smallcaps]{microtype}
+
 \RequirePackage{lmodern}
 \RequirePackage[book]{FiraSans}
 \RequirePackage{caption}
 \RequirePackage{fancyhdr}
-
 \RequirePackage{fontspec}
+\RequirePackage[explicit]{titlesec}
 
-% replaced A4 for a4paper 
+%% Fixed A4 error: replaced A4 for a4paper (2025)
 \RequirePackage[a4paper,top=.4in,includehead,headsep=20pt,headheight=28pt,left=.70in,textwidth=41.5pc,textheight=60pc,columnsep=18pt,footskip=18pt]{geometry}
 
 %\renewcommand*\ttdefault{cmvtt}
 \usepackage{fontspec}
 \setmainfont{Times New Roman}
+
+%% New commands
 
 \renewcommand{\title}[2][]{%
   \gdef\@shorttitle{#1}
@@ -66,29 +77,18 @@
 \def\engtitlefont{\fontsize{12}{14}\bfseries\selectfont\raggedright\mathversion{normal}}
 \def\authorfont{\normalsize\rightskip5.5pc\vskip1.0pt \mathversion{normal}}
 
-%\def\affilfont{\footnotesize\vskip1.5pt \raggedright\mathversion{normal}}
-
-%\usepackage{scrextend}
-%\deffootnote{0em}{1.6em}{\thefootnotemark.\enskip
-%\deffootnote{1.5em}{1em}{\thefootnotemark.\ }
-%\deffootnotemark{\textsuperscript{(\thefootnotemark)}}
+%% Turning on - \affil warning fixed (2025)
+\def\affilfont{\footnotesize\vskip1.5pt \raggedright\mathversion{normal}}
 
 
 \def\abstractfont{\small\rightskip5.5pc}
 \def\keywordfont{\small\rightskip5.5pc\itshape}
 \def\licensefont{\footnotesize}
 
-%% Section
+%% Package sectsty is not necessary when titlesec is used.
+% Section
+%\usepackage{sectsty}
 
-\usepackage{sectsty}
-
-
-\def\sectionfont{\fontsize{11}{11}\bfseries\rightskip1pc plus1fill\mathversion{bold}}
-\def\subsectionfont{\normalsize\bfseries\rightskip1pc plus1fill\mathversion{bold}}
-\def\subsubsectionfont{\normalsize\itshape\rightskip1pc plus1fill\mathversion{normal}}
-\def\paragraphfont{\normalsize\itshape\mathversion{normal}}%
-\def\subparagraphfont{\normalsize}%
-\def\subsubparagraphfont{\normalsize}%
 \def\bibliofont{\small}
 \def\tabnotefont{\footnotesize}
 
@@ -101,15 +101,16 @@
   \vskip2pt
 }
 
-\renewcommand{\abstractname}{}
-
-
 \fancyhf{}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
 %\fancyhead[LE,RO]{\thepage}
 %\fancyhead[LO]{\itshape\@shorttitle}
 %\fancyhead[RE]{\itshape\@shortauthor}
+
+%% FIX - \setlength removed the warning about headheight
+\setlength{\headheight}{36.90002pt}
+
 \fancyhead[L]{\footnotesize\itshape\@shorttitle}
 \fancyhead[R]{\footnotesize\itshape\@shortauthor}
 \fancypagestyle{plain}{%
@@ -123,6 +124,7 @@
   \cfoot{}
 }
 
+\renewcommand{\abstractname}{}
 \renewcommand{\abstitlestyle}[1]{\textbf{#1}}
 \renewcommand{\abstractnamefont}{\bfseries}
 \renewcommand{\abstracttextfont}{\abstractfont}
@@ -142,6 +144,18 @@
 \captionsetup*[table]{font=small,position=top,labelfont=bf,labelsep=period,skip=2pt}
 
 \newenvironment{acknowledgements}{\section*{Acknowledgements}\small}{}
+
+%% Title formats and spacing
+
+\def\sectionfont{\fontsize{15}{17}\bfseries\mathversion{bold}}
+\def\subsectionfont{\fontsize{12}{15}\bfseries\mathversion{bold}}
+\def\subsubsectionfont{\normalsize\bfseries\mathversion{normal}}
+\def\paragraphfont{\normalsize\bfseries\mathversion{normal}}%
+\def\subparagraphfont{\normalsize}%
+\def\subsubparagraphfont{\normalsize}%
+\def\bibliofont{\small}
+\def\tabnotefont{\footnotesize}
+
 
 \titleformat{\section}
   {\sectionfont}
@@ -167,10 +181,19 @@
   {0.5em}
   {#1}
   
-\titlespacing*{\section}{0pt}{18pt}{6pt}
-\titlespacing*{\subsection}{0pt}{18pt}{6pt}
-\titlespacing*{\subsubsection}{0pt}{10pt}{2pt}
-\titlespacing*{\paragraph}{0pt}{6pt}{.5em}
+%% added (2025)
+
+\titleformat{\subparagraph}[runin]
+  {\subparagraphfont}
+  {\theparagraph}
+  {0.5em}
+  {#1}
+
+\titleformat{\subsubparagraph}[runin]
+  {\subsubparagraphfont}
+  {\theparagraph}
+  {0.5em}
+  {#1}
 
 \apptocmd{\quotation}{\setlength{\parindent}{0pt}%
 \noindent\ignorespaces}{}{}
@@ -190,7 +213,5 @@
 
 \addtolength{\textfloatsep}{-0.0cm}
 \setlength\textfloatsep{0.2cm}
-
-
 
 \endinput
