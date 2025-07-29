@@ -1,5 +1,7 @@
-%% sbc2025 - SBC template for submitting papers for  SBC journals
-
+<!-- 
+sbc2025 - SBC template for submitting papers for  SBC journals
+-->
+# sbc2025.cls
 
 ## Sobre
 
