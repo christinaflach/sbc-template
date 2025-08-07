@@ -47,9 +47,9 @@
 
 \title[Template SBC Reviews 2025 for papers in English]{Presenting the SBC Reviews template 2025 - Version for papers in English}
 
-%THE ORCID IS MANDATORY FOR EACH AUTHOR IN REIC
+%THE ORCID IS MANDATORY FOR EACH AUTHOR IN ROCS
 \author[Viterbo et al. 202X]{
-\affil{\textbf{José Viterbo}~\orcidlink{0000-0002-0339-6624}~\textcolor{blue}{\faEnvelopeO}~~[{Universidade Federal Fluminense}~|\href{mailto:viterbo@ic.uff.br}{~{\textit{viterbo@ic.uff.br}}}~]}
+\affil{\textbf{José Viterbo}~\orcidlink{0000-0002-0339-6624}~\textcolor{blue}{\faEnvelope}~~[{Universidade Federal Fluminense}~|\href{mailto:viterbo@ic.uff.br}{~{\textit{viterbo@ic.uff.br}}}~]}
 
 \affil{\textbf{Clodis Boscarioli}~\orcidlink{0000-0002-7110-2026}~~[{Universidade Estadual do Oeste do Paraná}~|\href{mailto:clodis.boscarioli@unioeste.br}{{\textit{clodis.boscarioli@unioeste.br}}}~]}
 
@@ -101,10 +101,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
 
-Manuscripts must explicitly \textbf{indicate how the ethical issues of the research were addressed and managed}, including the research approval by an ethics committee when applicable. We encourage the authors to make their datasets, methods, software, transcripts, and other additional materials available for the readers. All the supplementary material the authors provided will appear on the paper's publication page in case of acceptance. Follow this template when preparing your manuscript for submission. 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum \citep{ref1}. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat \citep{ref2}. 
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (see \textbf{ Table~\ref{tab1}}).
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum \citep{ref3}, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -134,11 +130,51 @@ Dimension & Classification accuracy \\
 \label{tab1}
 \end{table}
 
+You may also use the \texttt{tabularray} package.
+
+\begin{table}[!ht]
+\caption{This is an example of table caption.}
+\centering
+\begin{tblr}{%
+columns={c},
+row{even}={gray9},
+row{1}={bg=red!10, font=\bfseries}
+}
+\hline
+Dimension & Classification accuracy \\
+\hline%
+ 1  & 0.6 \\
+ 2  & 0.963 \\
+ 3  & 0.97 \\
+ 4  & 0.9690 \\
+ 5  & 0.9840 \\
+ 6  & 0.98423 \\
+ 7  & 0.9873 \\
+ 8  & 0.9884 \\
+ 9  & 0.9873 \\
+ 10 & 0.9898 \\
+ 11 & 0.991 \\
+\end{tblr}
+\label{tab1-1}
+\end{table}
+
+\section{Systematic Reviews}
+
+Systematic Reviews.
+
+\subsection{What Is Eligibility Criteria In A Systematic Review?}
+
+Source: \url{https://www.distillersr.com/resources/systematic-literature-reviews/eligibility-criteria-in-a-systematic-review}
+
+Eligibility criteria is a pre-specified, unambiguous basis that determines the scope of studies to be synthesized in a systematic review. The eligibility criteria can be developed newly by the authors, or it can be adopted from another review. In the second scenario, the original authors must be referenced. It guides the selection of literature during the search in databases or other sources. During title, abstract or full-text reading, or potential articles, the criteria dictates what must be included (inclusion criteria), and excluded (exclusion criteria) in the review. These are a fundamental prerequisite of all systematic review methods and are often recorded as a paragraph, or table within the methodology section of the final report.
+
+Eligibility criteria are defined after setting the research question, and study objective(s), and before data collection. However, scoping searches may be performed beforehand to better establish them.
  
 \section{Example of Head Level 1}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \subsection{This is an example of head level 2}
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \begin{quotation}
@@ -284,6 +320,9 @@ THIS DECLARATION IS MANDATORY. If there are no competing interests, the authors 
 
 \begin{materials}
 THIS DECLARATION IS MANDATORY. If the authors are making their data and/or codes openly available, the declaration should be: ``The datasets generated and/or analysed, and the software developed  during the current study are available in lorem ipsum dolor sit amet''. Otherwise, the declaration should be: ``The datasets generated and/or analysed, and the software developed  during the current study will be made upon request''.
+We encourage the authors to make their datasets, methods, software, transcripts, and other additional materials available 
+for the readers. 
+All the supplementary material the authors provided will appear on the paper's publication page in case of acceptance.
 \end{materials}
 
 \begin{aitools}
@@ -295,9 +334,13 @@ If authors used generative AI software tools to edit and improve the quality of 
 
 \end{aitools}
 
+\begin{furtherinformation}
+Manuscripts must explicitly 
+\textbf{indicate how the ethical issues of the research were addressed and managed}, 
+including the research approval by an ethics committee when applicable. 
+\end{furtherinformation}
+
 \end{declarations}
-
-
 
 \bibliographystyle{apalike-sol}
 \bibliography{refs}

@@ -80,9 +80,9 @@
 \engtitle{\textcolor{engtitle}{Presenting the SBC Reviews 2025 template - Version for papers in Portuguese}}
 
 
-%THE ORCID IS MANDATORY FOR EACH AUTHOR IN JBCS
+%THE ORCID IS MANDATORY FOR EACH AUTHOR IN ROCS
 \author[Viterbo et al. 202X]{
-\affil{\textbf{José Viterbo}~\orcidlink{0000-0002-0339-6624}~\textcolor{blue}{\faEnvelopeO}~~[{Universidade Federal Fluminense}~|\href{mailto:viterbo@ic.uff.br}{~{\textit{viterbo@ic.uff.br}}}~]}
+\affil{\textbf{José Viterbo}~\orcidlink{0000-0002-0339-6624}~\textcolor{blue}{\faEnvelope}~~[{Universidade Federal Fluminense}~|\href{mailto:viterbo@ic.uff.br}{~{\textit{viterbo@ic.uff.br}}}~]}
 
 \affil{\textbf{Clodis Boscarioli}~\orcidlink{0000-0002-7110-2026}~~[{Universidade Estadual do Oeste do Paraná}~|\href{mailto:clodis.boscarioli@unioeste.br}{{\textit{clodis.boscarioli@unioeste.br}}}~]}
 
@@ -136,13 +136,6 @@ Proceedings, Template, SBC OpenLib, Indexing
 \section{Introdução}
 \label{sec:intro}
 
-Observações iniciais do Prof. Ralha:
-\begin{itemize}
-    \item Este arquivo faz uso ``implícito"\ de texto em latim que é provido por um certo pacote---não vou citar o nome---que desenvolvedores de classes \LaTeX\ usam para facilitar testes. Vi que esse pacote não está incluido no preâmbulo deste documento. Ainda bem!
-    \item por gentileza, entendam que publicar em jornais científicos está relacionado a tipografia profissional. Então deixem este aspecto para o \LaTeX. Seria aconselhável a leitura de textos em tipografia para que entendam que ``editoração de textos'' feita por produtos comerciais tipo eh ... vocês sabem quais! não é nem de perto algo que se aproxime da tipografia!
-    \item Por óbvio, deve-se sempre iniciar a criação de um arquivo \TeX\ pelo seu preâmbulo. Deve-se evitar \textit{tomar emprestado} templates de outras pessoas. Tenho observado que muitos ``usuários'' não observam este fato levando a casos em que o arquivo inclui o mesmo pacote duas, três e até quatro vezes.
-\end{itemize}
-
 A classe \textsl{sbc2025} é projetada para trabalhar com os \textit{engines} xetex e luatex. Dessa forma, deve-se compilar o documento 
 \begin{enumerate}
     \item no Overleaf, ajustando no menu opção de compilação para \textbf{xelatex} ou \textbf{lualatex}.\footnote{Os engines são denominados xetex e luatex. Já os comandos de compilação são \textsl{xelatex} e \textsl{lualatex}.}
@@ -168,22 +161,13 @@ A resposta é: \textbf{fontes!} Pdflatex usa um esquema de codificação de font
 
 Os dois pacotes do título da seção pertencem a ``universos'' distintos e não devem ser ambos incluídos no mesmo preâmbulo sob a pena de conflitos.
 
-O pacote \texttt{fontspec} lida com o universo dos fontes Truetype e/ou Opentype. De forma super simplificada, o pacote \texttt{fontspec} foi originalmente desenvolvido para contornar o problema dos fontes hardwired do \LaTeX\ e dar liberdade para uso de quaquer fonte TrueType ou Opentype  disponíveis no computador do usuário. 
-O pacote também disponibiliza scripts para diferentes padrões de línguas: lembre que as línguas romanas, como o português, se escreve da esquerda para a direita. No entanto, em outras, a escrita se realiza da direita para a esquerda. Nem vou dizer que há aquelas em que uma linha vai da esquerda para a direita e a linha seguinte da direita para a esquerda. E se fosse na vertical? O \texttt{fontspec} é seu amigo nessas situações.
+O pacote \texttt{fontspec} lida com o universo dos fontes Truetype e/ou Opentype. 
+A distribuição TeXlive---a qual é usada pelo Overleaf---instala uma vasta gama de fontes: por exemplo, o \textbf{TeX Gyre Termes} é o equivalente livre e gratuito do fonte \textbf{Times New Roman}. 
 
-A distribuição TeXlive---a qual é usada pelo Overleaf---instala uma vasta gama de fontes: por exemplo, o \textbf{TeX Gyre Termes} é o equivalente livre e gratuito do fonte \textbf{Times New Roman}. Devo lembrar que jornais e revistas científicas padronizam o fonte a ser utilizado. Se possível, aconselho a leitura do manual do pacote.  
-
-Obs: para os engines xetex e luatex não é obrigatório realizar a inclusão do pacote \texttt{fontspec}. A omissão faz o engine assumir valores default para fonte e suas propriedades.\footnote{Por simplicidade venho usando o termo \textsc{fonte} como sinônimo do termo \textsc{typeface}. No entanto, os profissionais de tipografia distinguem os dois termos.}
+Obs: para os engines xetex e luatex não é obrigatório realizar a inclusão do pacote \texttt{fontspec}. A omissão faz o engine assumir valores default para fonte e suas propriedades.
 
 Para o engine pdftex, o pacote a ser incluido deveria ser o \textbf{fontenc}. 
 A inclusão desse pacote faz com que o engine leia arquivos de definição, e outros associados e com isso executa uma ligação ``estrita'' ao fonte.  
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-
-\textcolor{blue!50!black}{%
-Manuscripts must explicitly \textbf{indicate how the ethical issues of the research were addressed and managed}, including the research approval by an ethics committee when applicable. We encourage the authors to make their datasets, methods, software, transcripts, and other additional materials available for the readers. All the supplementary material the authors provided will appear on the paper's publication page in case of acceptance. Follow this template when preparing your manuscript for submission.}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum \citep{ref1}. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat \citep{ref2}. 
 
 \begin{table}[!ht]
 \caption{Exemplo de legenda de tabela.}
@@ -208,7 +192,8 @@ Dimensão & Classificação\\
 \label{tab1}
 \end{table}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (see \textbf{ Table~\ref{tab1}}). \textcolor{red!50!black}{Tabelas! Essa é outra questão que me irrita quando vejo que a mesma foi produzida por ferramenta online!} Tabelas são elementos importantes na comunicação de dados e é um dos aspectos mais difíceis de se lidar em tipografia. Por outro lado, tabelas deveriam ser entidades simples de se projetar. Assim, recomendo fortemente o uso do pacote \texttt{tabularray}. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (see \textbf{ Table~\ref{tab1}}). 
+Assim, recomendamos fortemente o uso do pacote \texttt{tabularray}. 
 
 \begin{table}[!ht]
 \caption{Exemplo de legenda de tabela.}
@@ -236,14 +221,21 @@ Dimensão & Classificação\\
 \label{tab1-1}
 \end{table}
 
-
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum \citep{ref3}, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat~\citep{ref4}.
 
 
- 
+\section{Revisões Sistemáticas da Literatura}
+
+\subsection{Critérios de Eligibilidade}
+
+Os critérios de elegibilidade são uma base pré-especificada e inequívoca que determina o escopo dos estudos a serem sintetizados em uma revisão sistemática. Os critérios de elegibilidade podem ser desenvolvidos pelos autores ou podem ser adotados de outra revisão. No segundo cenário, os autores originais devem ser referenciados. Eles orientam a seleção da literatura durante a busca em bases de dados ou outras fontes. Durante a leitura do título, resumo ou texto completo, ou de artigos em potencial, os critérios determinam o que deve ser incluído (critérios de inclusão) e excluído (critérios de exclusão) na revisão. Estes são um pré-requisito fundamental de todos os métodos de revisão sistemática e são frequentemente registrados como um parágrafo ou tabela na seção de metodologia do relatório final.
+
+Os critérios de elegibilidade são definidos após a definição da pergunta de pesquisa e do(s) objetivo(s) do estudo, e antes da coleta de dados. No entanto, pesquisas de escopo podem ser realizadas previamente para melhor estabelecê-los.
+
+
+
 \section{Exemplo de Título Nível 1 (Seção)}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -408,6 +400,14 @@ Caso contrário, a declaração deve ser:
 %
 Se os autores utilizaram ferramentas de software de IA generativa para editar e melhorar a qualidade de textos existentes, por exemplo, para melhorar a ortografia, a gramática, a pontuação e a clareza, não precisam declarar seu uso.
 \end{aitools}
+
+\begin{furtherinformation}
+Manuscritos devem indicar explicitamente como as questões éticas da pesquisa foram abordadas e gerenciadas, 
+incluindo a aprovação da pesquisa por um comitê de ética, quando aplicável.
+Incentivamos os autores a disponibilizarem seus conjuntos de dados, métodos, softwares, 
+transcrições e outros materiais adicionais aos leitores. 
+Todo o material suplementar fornecido pelos autores aparecerá na página de publicação do artigo em caso de aceitação. 
+\end{furtherinformation}
 
 \end{declarations}
 

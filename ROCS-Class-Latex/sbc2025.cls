@@ -24,8 +24,8 @@
 % orcidlink. Afinal o único glifo usado do academicons é o do orcid!
 \RequirePackage{orcidlink}
 
-\RequirePackage{fontawesome} % o glifo de envelope de carta é deste
-                             % pacote 
+\RequirePackage{fontawesome6} % o glifo de envelope de carta é deste
+                              % pacote 
 
 % Identify the engine in use (pdftex, luatex, xetex)
 \RequirePackage{iftex}
@@ -37,13 +37,14 @@
 	\RequirePackage[book]{FiraSans}
 \else % caso o engine seja o xelatex ou lualatex
     \RequirePackage{fontspec}
-    \setmainfont{TeX Gyre Termes}%% esse typeface eh versao livre 
+    \def\faEnvelopeO{\symbol{"F003}}
+%    \setmainfont{TeX Gyre Termes}%% esse typeface eh versao livre 
 	%% e gratuita do {Times New Roman} que as editoras tem mas os 
 	%% usuarios nao tem acesso. A familia TeX Gyre esta disponivel 
 	%% na distribuicao TEXLIVE que eh usada pelo OverLeaf. Pode ser
 	%% que o OverLeaf tenha o Times New Roman na sua configuracao. 
 	%% Ha que se investigar isso!
-	\setsansfont{Roboto}
+%	\setsansfont{Roboto}
 \fi
 
 \RequirePackage{xcolor}
@@ -316,7 +317,7 @@
 \appto{\endabstract}{\vskip2pt}
 
 \newenvironment{mail}{%
-  \vskip4pt\noindent\mailfont{\textcolor{blue}{\faEnvelopeO}~}%
+  \vskip4pt\noindent\mailfont{\textcolor{blue}{\faEnvelope}~}%
 }{\vskip-6pt}
 
 \newenvironment{abstract-pt}{%
