@@ -24,8 +24,11 @@
 % orcidlink. Afinal o único glifo usado do academicons é o do orcid!
 \RequirePackage{orcidlink}
 
-\RequirePackage{fontawesome6} % o glifo de envelope de carta é deste
-                              % pacote 
+% Resolver para rodar na linha de comando sem usar o número da versão.
+\RequirePackage{fontawesome6} % o glifo de envelope de carta
+
+% \RequirePackage{fontawesome} % Used by the Overleaf template
+
 
 % Identify the engine in use (pdftex, luatex, xetex)
 \RequirePackage{iftex}
